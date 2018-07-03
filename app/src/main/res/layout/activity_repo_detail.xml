@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/userProfileImage"
+        android:layout_marginTop="@dimen/medium_spacing"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_centerHorizontal="true"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/lightGray"/>
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_below="@+id/userProfileImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/large_text"
+        android:textStyle="bold"
+        tools:text="Username"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:padding="@dimen/medium_spacing"
+        android:layout_below="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/medium_text"
+        android:maxLines="10"
+        tools:text="This is the description of the repository. Bla bla bla"/>
+
+    <LinearLayout
+        android:id="@+id/repoDataContainer"
+        android:layout_below="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/stars"
+            android:padding="@dimen/small_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_star_black_8dp"
+            android:textSize="@dimen/medium_text"
+            android:drawablePadding="@dimen/small_spacing"
+            android:background="@drawable/textview_border"
+            tools:text="56 Stars"/>
+
+        <TextView
+            android:id="@+id/forks"
+            android:padding="@dimen/small_spacing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_fork_16dp"
+            android:textSize="@dimen/medium_text"
+            android:drawablePadding="@dimen/small_spacing"
+            android:background="@drawable/textview_border"
+            tools:text="3 Forks"/>
+    </LinearLayout>
+
+    <us.feras.mdv.MarkdownView
+        android:id="@+id/readme"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:layout_below="@+id/repoDataContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:focusable="true"
+    android:clickable="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/xsmall_spacing"
+        card_view:cardElevation="2dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            xmlns:tools="http://schemas.android.com/tools">
+
+            <TextView
+                android:id="@+id/repoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/medium_spacing"
+                android:layout_marginBottom="@dimen/xsmall_spacing"
+                android:layout_marginTop="@dimen/medium_spacing"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/black"
+                tools:text="ButterKnife"/>
+
+            <TextView
+                android:id="@+id/starsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/medium_spacing"
+                android:drawablePadding="@dimen/xsmall_spacing"
+                android:drawableLeft="@drawable/ic_star_black_8dp"
+                android:drawableStart="@drawable/ic_star_black_8dp"
+                android:textColor="@color/black"
+                tools:text="67020"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_spacing"
+                android:layout_marginLeft="@dimen/medium_spacing"
+                android:layout_marginBottom="@dimen/medium_spacing"
+                tools:text="ButterKnife is a library bla bla"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

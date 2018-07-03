@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Github Trending</string>
+    <string name="search_hint">Search for repositories...</string>
+</resources>
